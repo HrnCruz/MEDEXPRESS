@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bago"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="326dp"
+        android:layout_height="368dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="334dp"
+            android:layout_height="336dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/txtSlogan"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/slogan"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSingUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/color1"
+            android:text="Sing Up"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnSingIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/color11"
+            android:text="Sing In"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnSingOut"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/color4"
+            android:text="Sing Out"
+            android:onClick="signout"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

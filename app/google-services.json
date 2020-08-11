@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "206418266766",
+    "firebase_url": "https://medexpress-e62ba.firebaseio.com",
+    "project_id": "medexpress-e62ba",
+    "storage_bucket": "medexpress-e62ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206418266766:android:2c0b92a701f3a1b0f757df",
+        "android_client_info": {
+          "package_name": "com.example.medexexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206418266766-j50gbgfi6qnh63b2b2rusngchrc6hddu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medexexpress",
+            "certificate_hash": "e3b8826e2fd9097eb39b569ef2006fa33b9fcde2"
+          }
+        },
+        {
+          "client_id": "206418266766-hdueud86vvrdmbfshiarth605bob8vov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYRfn_wMV6mWcKyIVYw4eGYBfubEGgMr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206418266766-hdueud86vvrdmbfshiarth605bob8vov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206418266766:android:a26e8acef93d2475f757df",
+        "android_client_info": {
+          "package_name": "com.example.medexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206418266766-ludsj06ng574l890u6c3ei17iiqjabde.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medexpress",
+            "certificate_hash": "9c31081edbf84ce8ca475dcc96702a5e5844705e"
+          }
+        },
+        {
+          "client_id": "206418266766-hdueud86vvrdmbfshiarth605bob8vov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYRfn_wMV6mWcKyIVYw4eGYBfubEGgMr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206418266766-hdueud86vvrdmbfshiarth605bob8vov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
