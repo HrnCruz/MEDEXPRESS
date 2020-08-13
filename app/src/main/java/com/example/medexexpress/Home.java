@@ -3,6 +3,7 @@ package com.example.medexexpress;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
@@ -24,7 +25,10 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -68,13 +72,52 @@ public class Home extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+
+        //este lo coloque
+        navigationView.setItemIconTintList(null);
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home,
+                R.id.nav_gallery,
+                R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+           @Override
+           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+               int id = item.getItemId();
+
+               if (id == R.id.nav_menu){
+
+
+               }else if (id == R.id.nav_cart){
+                   Intent cartIntent = new Intent(Home.this,Carts.class);
+                   startActivity(cartIntent);
+
+               }else if (id == R.id.nav_orders){
+                   Intent orderIntent = new Intent(Home.this,SingUp.class);
+                   startActivity(orderIntent);
+
+               }else if (id == R.id.nav_log_out){
+                   Intent signIn = new Intent(Home.this,SingIn.class);
+                   signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                   startActivity(signIn);
+
+               }
+
+               DrawerLayout drawer =(DrawerLayout)findViewById(R.id.drawer_layout);
+               drawer.closeDrawer(GravityCompat.START);
+               return true;
+           }
+       });
+
+
 
 
         View headerView = navigationView.getHeaderView(0);
@@ -96,6 +139,7 @@ public class Home extends AppCompatActivity {
             @Override
             protected void onBindViewHolder( MenuViewHolder viewHolder, int position, Category model) {
                 viewHolder.txtMenuName.setText(model.getName());
+
 
                 Picasso.get().load(model.getImagen())
                             .into(viewHolder.imageView, new Callback() {
@@ -146,6 +190,11 @@ public class Home extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
+
+
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
