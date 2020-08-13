@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bago"
+    android:background="@drawable/bago5"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -41,21 +41,21 @@
 
         <Button
             android:id="@+id/btnSingUp"
-            android:layout_width="0dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@color/color1"
+            android:background="@color/color5"
             android:text="Sing Up"
             android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btnSingIn"
-            android:layout_width="0dp"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@color/color11"
+            android:background="@color/colorAccent"
             android:text="Sing In"
             android:textColor="@android:color/white" />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@color/color4"
+            android:background="@color/colorPrimary"
             android:text="Sing Out"
             android:onClick="signout"
             android:textColor="@android:color/white" />

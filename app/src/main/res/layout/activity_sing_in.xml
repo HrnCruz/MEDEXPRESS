@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bago"
+    android:background="@drawable/bago8"
     tools:context=".SingIn">
 
 
@@ -16,13 +16,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"  >
 
+        <ImageView
+            android:layout_width="322dp"
+            android:layout_height="177dp"
+            android:src="@drawable/logo" />
+
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
             android:hint="Phone Number"
             android:textColorHint="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="33456789"
+            android:text="33003657"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="phone"
@@ -38,7 +43,7 @@
             android:textColorHint="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="33456789"
+            android:text="123456789"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:inputType="textPassword"
@@ -60,11 +65,12 @@
         android:id="@+id/btnSingIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="15dp"
         android:layout_weight="1"
-        android:background="@color/color11"
+        android:background="@color/color15"
         android:text="Sing In"
         android:textColor="@android:color/white" />
 

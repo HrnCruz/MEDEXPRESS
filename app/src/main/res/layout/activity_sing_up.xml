@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bago"
+    android:background="@drawable/bago8"
     tools:context=".SingUp">
 
 
@@ -15,6 +15,11 @@
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"  >
+
+        <ImageView
+            android:layout_width="384dp"
+            android:layout_height="167dp"
+            android:src="@drawable/logo" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
@@ -78,9 +83,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginBottom="6dp"
         android:layout_weight="1"
-        android:background="@color/color1"
+        android:background="@color/color15"
         android:text="Sing Up"
         android:textColor="@android:color/white" />
 

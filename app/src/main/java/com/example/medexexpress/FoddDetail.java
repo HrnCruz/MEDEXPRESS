@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.medexexpress.Model.Fodd;
+import com.example.medexexpress.Model.Order;
+import com.example.medexexpress.database.Database;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -31,6 +34,8 @@ public class FoddDetail extends AppCompatActivity {
     String foodId="";
     DatabaseReference databaseReference;
 
+    Fodd currentFodd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,24 @@ public class FoddDetail extends AppCompatActivity {
 
         numberButton =(ElegantNumberButton)findViewById(R.id.number_button);
         btnCart=(FloatingActionButton)findViewById(R.id.btnCart);
+
+        btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             new Database(getBaseContext()).addToCart(new Order(
+                        foodId,
+                        currentFodd.getName(),
+                        numberButton.getNumber(),
+                        currentFodd.getPrice()
+                    //    currentFodd.getDiscount()
+
+                ));
+
+                Toast.makeText(FoddDetail.this, "Add to Cart", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
 
         foodd_description=(TextView)findViewById(R.id.fodd_description);
         foodd_name=(TextView)findViewById(R.id.fodd_name);
@@ -63,23 +86,23 @@ public class FoddDetail extends AppCompatActivity {
         databaseReference.child(foodId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange( DataSnapshot dataSnapshot) {
-                Fodd FOOD = dataSnapshot.getValue(Fodd.class);
+                currentFodd = dataSnapshot.getValue(Fodd.class);
 
               //  Picasso.with(getBaseContext()).load(FOOD.getImage())
                   //      .into(foodd_image);
 
 
 
-                Picasso.get().load(FOOD.getImage())
+                Picasso.get().load(currentFodd.getImage())
                         .into(foodd_image);
 
 
-                collapsingToolbarLayout.setTitle(FOOD.getName());
+                collapsingToolbarLayout.setTitle(currentFodd.getName());
 
-                foodd_price.setText(FOOD.getPrice());
+                foodd_price.setText(currentFodd.getPrice());
 
-                foodd_name.setText(FOOD.getName());
-                foodd_description.setText(FOOD.getDescription());
+                foodd_name.setText(currentFodd.getName());
+                foodd_description.setText(currentFodd.getDescription());
 
 
                 //Picasso.with(getBaseContext()).load(model.getImagen())

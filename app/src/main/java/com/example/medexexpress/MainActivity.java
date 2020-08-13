@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAuthListener= new FirebaseAuth.AuthStateListener() {
             @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+            public void onAuthStateChanged(FirebaseAuth firebaseAuth) {
 
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user!=null){
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                             AuthUI.getInstance()
                             .createSignInIntentBuilder()
                             .setAvailableProviders(providers)
-                                    .setLogo(R.drawable.bago)
+                                    .setLogo(R.drawable.logo)
                                     .setTheme(R.style.LoginTheme)
                             .setIsSmartLockEnabled(false)
                             .build(),RC_SIGN_IN

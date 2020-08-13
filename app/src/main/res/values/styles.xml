@@ -28,7 +28,7 @@
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@drawable/logo1</item>
+        <item name="android:windowBackground">@drawable/bago3</item>
         <item name="android:textColorHint">@android:color/darker_gray</item>
 
 
