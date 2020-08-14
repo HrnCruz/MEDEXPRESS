@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.medexexpress" >
+    package="com.example.medexexpress">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,9 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".OrderStatus" >
-        </activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".Sugerencia"></activity>
+        <activity android:name=".Email.Email" />
+        <activity android:name=".OrderStatus" />
         <activity android:name=".Carts" />
         <activity android:name=".FoddDetail" />
         <activity android:name=".FodList" />
@@ -23,7 +24,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SingUp" />
         <activity android:name=".SingIn" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

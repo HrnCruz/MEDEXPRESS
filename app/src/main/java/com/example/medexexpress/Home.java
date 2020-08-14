@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.medexexpress.Common.Common;
+import com.example.medexexpress.Email.Email;
 import com.example.medexexpress.Interface.ItemClickListener;
 import com.example.medexexpress.Model.Category;
 import com.example.medexexpress.ViewHolder.MenuViewHolder;
@@ -93,15 +94,21 @@ public class Home extends AppCompatActivity {
            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                int id = item.getItemId();
 
-               if (id == R.id.nav_menu){
-
+               if (id == R.id.nav_sugerencias){
+                   Intent sugerenciaIntent = new Intent(Home.this, Sugerencia.class);
+                   startActivity(sugerenciaIntent);
 
                }else if (id == R.id.nav_cart){
                    Intent cartIntent = new Intent(Home.this,Carts.class);
                    startActivity(cartIntent);
 
+               }else if (id == R.id.nav_email){
+                   Intent emailIntent = new Intent(Home.this,Email.class);
+                   startActivity(emailIntent);
+
                }else if (id == R.id.nav_orders){
-                   Intent orderIntent = new Intent(Home.this,SingUp.class);
+                   Intent orderIntent = new Intent(Home.this,OrderStatus
+                           .class);
                    startActivity(orderIntent);
 
                }else if (id == R.id.nav_log_out){

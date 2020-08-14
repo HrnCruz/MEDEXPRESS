@@ -12,4 +12,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="texto_ec">Enviar Correo</string>
+    <string name="texto_correo">Enviar a:</string>
+    <string name="texto_asunto">Asunto:</string>
+    <string name="texto_mensaje">Mensaje:</string>
+    <string name="texto_btn_enviar">Enviar</string>
 </resources>

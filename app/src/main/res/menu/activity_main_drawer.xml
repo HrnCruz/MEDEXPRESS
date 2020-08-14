@@ -5,9 +5,15 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_menu"
-            android:icon="@drawable/ic_baseline_control_point_24"
-            android:title="Servicio" />
+            android:id="@+id/nav_email"
+            android:icon="@drawable/ic_baseline_email_24"
+            android:title="Quejas" />
+
+        <item
+            android:id="@+id/nav_sugerencias"
+            android:icon="@drawable/ic_baseline_insert_emoticon_24"
+            android:title="Sugerencias" />
+
         <item
             android:id="@+id/nav_cart"
             android:icon="@drawable/ic_baseline_add_shopping_cart_24"
@@ -15,7 +21,7 @@
         <item
             android:id="@+id/nav_orders"
             android:icon="@drawable/ic_baseline_favorite_border_24"
-            android:title="Registrarse " />
+            android:title="Servicio Ordenado " />
 
         <item
             android:id="@+id/nav_log_out"

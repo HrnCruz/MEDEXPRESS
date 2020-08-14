@@ -31,16 +31,20 @@ public class OrderStatus extends AppCompatActivity {
 
     FirebaseRecyclerAdapter<Request, OrderViewHolder> adapter;
 
-    FirebaseDatabase database;
-    DatabaseReference requests;
+    DatabaseReference databaseReference;
+
+    //FirebaseDatabase database;
+    //DatabaseReference requests;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_status);
 
-        database = FirebaseDatabase.getInstance();
-        requests =database.getReference("Requests");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Requests");
+
+      //  database = FirebaseDatabase.getInstance();
+       // requests =database.getReference("Requests");
 
         recyclerView =(RecyclerView)findViewById(R.id.listOrders);
         recyclerView.setHasFixedSize(true);
@@ -48,7 +52,7 @@ public class OrderStatus extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         options = new FirebaseRecyclerOptions.Builder<Request>()
-                .setQuery(requests,Request.class).build();
+                .setQuery(databaseReference,Request.class).build();
 
 
         loadOrders(Common.curruntUser.getPhone());
@@ -59,9 +63,10 @@ public class OrderStatus extends AppCompatActivity {
 
     private void loadOrders(String phone) {
 
-        Query fod = FirebaseDatabase.getInstance().getReference("Requests").orderByChild("phone").equalTo(phone);
+         databaseReference.orderByChild("phone").equalTo(phone);
 
-        adapter = new FirebaseRecyclerAdapter<Request, OrderViewHolder>(options) {
+        adapter = new FirebaseRecyclerAdapter<Request, OrderViewHolder>(options)
+        {
             @Override
             protected void onBindViewHolder( OrderViewHolder viewHolder, int position,  Request model) {
                 viewHolder.txtOrdersId.setText(adapter.getRef(position).getKey());
